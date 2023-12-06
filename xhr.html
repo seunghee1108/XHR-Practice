@@ -12,8 +12,10 @@
 
   <script type="text/javascript">
 
+    // XMLHttpRequest 객체를 생성
     const xhr = new XMLHttpRequest();
 
+    // 상태 변화에 따라 특정 동작을 수행할 수 있도록 함
     xhr.onreadystatechange = function() {
 
       // State Check 
@@ -21,7 +23,7 @@
       // 200 : "OK"를 의미하며, 서버가 요청을 성공적으로 처리했음
       if(xhr.readyState == 4 && xhr.status == 200) {
 
-        // JSON 형태로 파싱
+        // JSON 형태로 파싱해서 json 변수에 저장
         let json = JSON.parse(xhr.responseText);
 
         let ul = document.getElementById('ul');
