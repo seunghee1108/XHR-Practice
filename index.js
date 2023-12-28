@@ -4,7 +4,7 @@
     xhr.onreadystatechange = function() {
       if(xhr.readyState == 4 && xhr.status == 200) {
         let json = JSON.parse(xhr.responseText);
-        let root = document.getElementById('root');
+        let ul = document.getElementById('ul');
 
         for(let i = 0; i < json.length; i++) {
 
@@ -14,8 +14,8 @@
           p.textContent = json[i].age;
        
 
-          root.appendChild(li);
-          root.appendChild(p);
+          ul.appendChild(li);
+          ul.appendChild(p);
         }
       }
     };
