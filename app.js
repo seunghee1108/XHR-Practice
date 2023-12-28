@@ -11,7 +11,7 @@ const server = http.createServer((req, res) => {
       res.writeHead(200, { 'Content-Type' : 'text/html'});
       res.end(data);
     });
-  } else if (req.method === 'GET' && req.url === '/xhr.js') {
+  } else if (req.method === 'GET' && req.url === '/index.js') {
     fs.readFile(xhrPath, 'utf8', (err, xhrData) => {
       res.writeHead(200, { 'Content-Type' : 'application/json'});
       res.end(xhrData);
